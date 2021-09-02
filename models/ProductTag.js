@@ -16,17 +16,17 @@ ProductTag.init(
     product_id: {
       type: DataTypes.INTEGER,
       references: {
-        model: "Product",
-        model: "id",
+        model: "product",
+        key: "id",
       },
-      tag_id: {
-        type: DataTypes.INTEGER,
-        references: {
-          model: "Tag",
-          model: "id",
-        },
-      }
-    }
+    },
+    tag_id: {
+      type: DataTypes.INTEGER,
+      references: {
+        model: "tag",
+        key: "id",
+      },
+    },
   },
   {
     sequelize,
